@@ -16,6 +16,7 @@ class ShowForm(Form):
         default= datetime.today()
     )
 
+
 class VenueForm(Form):
     name = StringField(
         'name', validators=[DataRequired()]
@@ -236,4 +237,3 @@ class ArtistForm(Form):
     seeking_description = StringField(
             'seeking_description'
      )
-
