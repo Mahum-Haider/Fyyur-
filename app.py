@@ -13,16 +13,14 @@ from logging import Formatter, FileHandler
 from flask_migrate import Migrate
 from flask_wtf import Form
 from forms import *
-from models import *
+from models import Venue, Show, Artist, db, app 
 
 #----------------------------------------------------------------------------#
 # App Config.
 #----------------------------------------------------------------------------#
 
-app = Flask(__name__)
 moment = Moment(app)
 app.config.from_object('config')
-db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 
